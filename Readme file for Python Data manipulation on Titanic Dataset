@@ -1,0 +1,168 @@
+# Python Data Manipulation on a Titanic dataset  
+
+ 
+
+## PROJECT DESCRIPTION 
+
+
+## REQUIREMENT FOR THE CT7201 ASSESSMENT(Data Science Masters Class Set 2022/2023)
+
+To develop a python notebook to analyse a titanic dataset using commented and correctly referenced python codes and libraries. Curating the questions below, we were able to complete this assessment in a well detailed manner:
+
+
+What was our motivation? 
+
+       To learn how to analyse data with python codes and libraries  
+
+Why did we build this project? 
+
+       To predict the survival rate of passengers of the titanic 
+
+What problem did we solve? 
+
+        By using some regression and classification models we were able to predict the survival rate with a 85% success rate 
+
+What did we learn? 
+
+       We learnt that certain factors influenced the survival of the passengers in the titanic like family size, gender, age, class and fare 
+
+What makes our project stand out? 
+
+    It is important to note the use of python libraries and functions to analyse the dataset. Several models were employed and the machine learning model with best prediction rate was about 85% to arrive at a good conclusion of prediction. The same classifier models were used with different independent variables and accuracies were compared to better understand what variables influenced the survival rate of passengers on the Titanic.  
+
+ 
+
+The above questions were then answered with well detailed python codes under the following topics: 
+
+>Factors determined passengers survival in the titanic 
+
+>Factors that reduced the chances of survival of certain passengers 
+
+
+
+ 
+
+TABLE OF CONTENT 
+
+>Topics covered
+
+>Titanic dataset picked by Team 8 
+
+>Description of variables in the titanic dataset
+
+>Python Libraries imported and their uses
+
+>Set up tasks taken to get our codes to run
+
+>Splitting of the Titanic dataset into test and train sets 
+
+>Cleaning the dataset to remove any data not needed and correct any possible misspellings
+
+>Data visualization of answers to the questions listed in the Project Description, using Seaborn library and Matplotlib library and other libraries 
+
+>Classification techniques employed to create predictive models of the titanic dataset 
+
+ 
+
+CONTENT
+
+Topics covered:
+
+>Python, Python Editors, Modules 
+
+>Object oriented coding 
+
+>Cleaning and manipulation of the dataset
+
+>Data analysis 
+
+>Feature engineering 
+
+
+The Titanic dataset picked by Team 8: https://www.kaggle.com/c/titanic/data
+
+Description of variables in the Titanic Dataset:
+
+Pclass: Passenger classes based on fares paid and a possible refelction of their economic standings
+1st = Upper
+2nd = Middle
+3rd = Lower
+Fare =  Ticket charge per passenger
+Age = Age of each passenger of the Titanic
+Sibsp = dataset defines family relations : Siblings/Spouse
+Sibling = Sister, Brother, Step-sister, Stepbrother
+Parch : defines family relations
+Child = person under 10
+Teen = person between age 10 and 18 years
+Embarked = Ports of entry of passengers namely Queenstown(Q), Cherbourg(C), Southampton(S)
+Cabin = Cabin numbers of the passengers
+
+Understanding the Titanic disaster and specifically what variables might affect the outcome of survival is important. Women and children are given preference for lifeboats. Class of the pasengers, Age, Sex may be good predictors of survival. We’ll start by exploring Sex and Pclass by visualizing the data.  The Survived column contains values of 0 if the passenger did not survive and 1 if they did, we can segment our data by sex and calculate the mean of this column. 
+
+Libraries imported were Pandas, NumPy, Math, Matplotlib, Seaborn, Sklearn, Collections
+
+1. Pandas library was imported because it is a high level data manipulation tool needed to understand and visualise the structure of the dataset 
+
+2. NumPy is a library for python which supports large arrays, so it was important in this assessment
+
+3. Matplotlib was important to aid visualizations of the dataset as histograms, piecharts, scatterplots, bar plots
+
+4. Seaborn library was imported as it is useful in showing individual feature details of variables important to the assessment
+
+5. Several functions was Sklearn(Scikit learn) library was imported because it is used to model datasets as clusters and also for regression analysis, which helps to predict outcomes of the dataset
+
+6. Isnan function is imported from Math module to check for missing values
+
+7. Counter function is imported from Collections module to count the items in an iterable list
+
+8. HTTPError is imported to handle if any occures when connecting to Github to get the data files.
+
+
+Different Python functions were used to explore the data and some after they were run had future warnings. Using a different python function in such instances produced the same results but no warnings as seen when the swarmplot function(from the seaborn package) was replaced with the stripplot function to show 'Survivals for Age and Pclass'. 
+
+A Python code was formulated to store each person in the data set and itertuples() function in python was used in the code for better performance.
+
+Also seen when 'Variance of fare calculated using the define function' gave the same output as 'Variance of fare calculated using numpy function'. This specifically illustrates how two different python functions can be used to manipulate the same set of variables and still give the same output(or visualization). Some python functions were found to print output faster than some did, even though the outputs were the same. This knowledge would help in time-sensitive data analysis work
+
+Setup tasks to ensure python codes ran include installation of conda, python version 3.9, jupyter, Visual code. All the conda environments were installed before the pip function was called in Anaconda prompt. This includes the following codes:
+
+1. conda create -n "Titanic"
+2. conda activate Titanic
+3. conda install Python pip
+4. conda install Python=3.9
+5. conda install jupyter
+6. conda install numpy
+7. conda install pandas
+8. conda install math
+9. conda install collections
+10. conda install matplotlib
+12. conda install seaborn
+13. conda install urllib
+14. pip install sklearn
+
+
+The first step in cleaning this dataset was understanding and fixing missing values. For example, in the ‘Embarked’ column, missing values were replaced with mode values using the approriate python codes. 
+
+Data visualization of answers to the questions listed in the Project Description, using Seaborn library and Matplotlib library and other libraries can be seen in our submitted pdf assessment file
+
+Feature engineering was used to summarize data. This helped to simplify our data transformation and improve the accuracy of machine models used in this assessment. 
+
+The Titanic dataset was split into test and train sets so that the latter dataset can be used to train the machine learning model. The test set is used to test the model to check the accuracy of the machine model predictions
+
+Some classification techniques were employed to create predictive models of the titanic dataset like the Random forest classifier which provided at good model accuracy of 0.86 of the train dataset and Logistic regression classifier which gave a good prediction of 0.85 of the train dataset.
+
+Classes 'Family' and 'Person' was created to summarize data about people traveled as family. For example, 'Person' Class was used to store values of passengers traveling with family.  'Family' Class was useful to calculate the percentage of adult males and females who survived. Dictionaries like 'family_dict' was created to store values of family members and 'family_group_dict' was used to show the number of families in the titanic, which was 170
+
+ 
+Reference:
+- Grus, J. (2019) Data science from scratch : first principles with python. Second edn. Sebastopol, CA: O'Reilly Media. Available at: INSERT-MISSING-URL (Accessed: May 5, 2022).
+ - Sweigart, A. (2015) Automate the Boring Stuff with Python: Practical Programming for Total Beginners, CA: No Starch Press
+ - https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide
+ - https://www.datasciencemadesimple.com/pie-chart-in-python-with-legends/
+ - https://data-flair.training/blogs/train-test-set-in-python-ml/
+
+TEAM MEMBERS AND CREDITS 
+
+Team Contribution from: Bassey Henshaw, Chanya Subasingha Arachchige, Zech-Enakhimion Ahmed and Oluwatoyin Odeniyi 
+
+Github Link: https://github.com/HenshawTheAnalyst
